@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>🤖 AI ToolCor Festival — Festival, Birthday & Jayanti Wishes</title>
+<meta name="description" content="Create beautiful wishes for every Indian festival, birthday, jayanti and special occasion. 100+ occasions, 5 card templates, AI-powered messages. 100% free!"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="particleCanvas"></canvas>
+<canvas id="fireworkCanvas"></canvas>
+<div class="toast-box" id="toastBox"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <span class="logo-icon">🤖</span>
+    AI ToolCor <span>Festival</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#occasions">Occasions</a></li>
+    <li><a href="#create">Create</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="calendar.html">📅 Calendar</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+    <button class="hamburger" id="hamBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="#occasions">🎪 Occasions</a>
+  <a href="#create">✍️ Create Wish</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="calendar.html">📅 Calendar</a>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" style="position:relative">
+
+  <!-- floating decorations -->
+  <span style="position:fixed;top:8%;left:7%;font-size:1.8rem;opacity:.07;animation:sparkleAnim 5s ease-in-out infinite;pointer-events:none;z-index:0">🪔</span>
+  <span style="position:fixed;top:20%;right:9%;font-size:1.5rem;opacity:.06;animation:sparkleAnim 7s ease-in-out infinite 1s;pointer-events:none;z-index:0">✨</span>
+  <span style="position:fixed;bottom:30%;left:5%;font-size:2rem;opacity:.05;animation:sparkleAnim 6s ease-in-out infinite 2s;pointer-events:none;z-index:0">🎆</span>
+  <span style="position:fixed;bottom:15%;right:7%;font-size:1.6rem;opacity:.06;animation:sparkleAnim 8s ease-in-out infinite .5s;pointer-events:none;z-index:0">🎊</span>
+
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span id="typer">Create beautiful festival wishes ✨</span>
+    </div>
+
+    <h1 class="hero-title">
+      Celebrate Every<br/>
+      <em class="gtext" id="rotator">Festival</em><br/>
+      Beautifully
+    </h1>
+
+    <p class="hero-sub">
+      Create stunning personalized wishes for <strong>every Indian festival, birthday, jayanti &amp; special occasion.</strong>
+      100+ occasions. AI messages. 5 card styles. 100% free ✨
+    </p>
+
+    <div class="hero-btns">
+      <a href="#create" class="btn-pri glow-pulse btn-xl">
+        <span>✍️ Create Wish Now</span>
+        <i class="shine"></i>
+      </a>
+      <a href="calendar.html" class="btn-sec btn-xl">📅 Festival Calendar</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <strong id="ctr1">0</strong>
+        <span>Wishes Created</span>
+      </div>
+      <div class="hstat-sep"></div>
+      <div class="hstat">
+        <strong>100+</strong>
+        <span>Occasions</span>
+      </div>
+      <div class="hstat-sep"></div>
+      <div class="hstat">
+        <strong>5</strong>
+        <span>Card Styles</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating hero card + orbit cards -->
+  <div class="hero-card-area">
+    <div class="orbit-card orbit-1">
+      <div class="orbit-emoji">🪔</div>
+      <div class="orbit-name">Diwali</div>
+      <div class="orbit-days">Loading...</div>
+    </div>
+
+    <div class="hero-card" id="heroCard">
+      <div class="hc-sparkle">✨</div>
+      <div class="hc-emoji" id="hcEmoji">🪔</div>
+      <div class="hc-title" id="hcTitle">Happy Diwali!</div>
+      <div class="hc-msg" id="hcMsg">May the festival of lights fill your home with joy! 🎆</div>
+      <div class="hc-from">— With love ❤️</div>
+    </div>
+
+    <div class="orbit-card orbit-2">
+      <div class="orbit-emoji">🎂</div>
+      <div class="orbit-name">Birthday</div>
+      <div class="orbit-days">Anytime</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- ========== SEARCH ========== -->
+<section class="search-section" style="padding:0 5% 40px;">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" class="search-input"
+      placeholder="Search any festival, birthday, jayanti..."
+      autocomplete="off"/>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</section>
+
+<!-- ========== OCCASIONS ========== -->
+<section class="section" id="occasions">
+  <div class="sec-header">
+    <span class="sec-tag"><i class="tdot"></i>Upcoming Events</span>
+    <h2 class="sec-title">Every <em class="gtext">Occasion</em> Covered</h2>
+    <p class="sec-sub">All Indian festivals, jayantis &amp; special days — from today onwards</p>
+  </div>
+  <div class="filter-bar" id="occFilters"></div>
+  <div class="occ-grid" id="occGrid"></div>
+</section>
+
+<!-- ========== CREATE ========== -->
+<section class="section" id="create">
+  <div class="sec-header">
+    <span class="sec-tag"><i class="tdot"></i>Card Creator</span>
+    <h2 class="sec-title">Design Your <em class="gtext">Wish Card</em></h2>
+    <p class="sec-sub">Festival backgrounds auto-apply. AI suggests the perfect message. ✨</p>
+  </div>
+
+  <div class="creator">
+    <div class="cr-form">
+      <div class="fg">
+        <label>🎪 Occasion</label>
+        <select id="crOccasion" class="finput"></select>
+      </div>
+      <div class="fg">
+        <label>👤 Recipient Name</label>
+        <input type="text" id="crTo" class="finput" placeholder="e.g. Dear Priya, Dear Friend..."/>
+      </div>
+      <div class="fg">
+        <label>✍️ Your Message</label>
+        <textarea id="crMsg" class="finput ftarea" rows="4" placeholder="Write from the heart..."></textarea>
+        <button class="ai-btn" id="aiBtn">🤖 AI Suggest Message</button>
+      </div>
+      <div class="fg">
+        <label>💌 From (Your Name)</label>
+        <input type="text" id="crFrom" class="finput" placeholder="Your name..."/>
+      </div>
+      <div class="fg">
+        <label>🖼️ Card Template</label>
+        <div class="tpl-selector" id="tplSelector"></div>
+      </div>
+      <div class="fg">
+        <label>🎨 Colour Theme <small style="color:var(--text-dim);font-size:.66rem;font-weight:400;text-transform:none;letter-spacing:0">(festival theme auto-applied)</small></label>
+        <div class="color-grid" id="colorGrid"></div>
+      </div>
+      <div class="fg">
+        <label>🔤 Font</label>
+        <select id="crFont" class="finput">
+          <option value="'Playfair Display',serif">Playfair Display — Elegant</option>
+          <option value="'Sora',sans-serif">Sora — Modern</option>
+          <option value="Georgia,serif">Georgia — Classic</option>
+          <option value="cursive">Cursive — Handwritten</option>
+        </select>
+      </div>
+      <div class="form-btns">
+        <button class="btn-pri" id="dlBtn">📥 Download Card</button>
+        <button class="btn-sec" id="shareBtn">🔗 Share</button>
+        <button class="btn-out" id="copyBtn">📋 Copy Text</button>
+      </div>
+    </div>
+
+    <div class="cr-preview">
+      <div class="prev-label">LIVE PREVIEW</div>
+      <div class="wish-card" id="wishCard">
+        <div id="crPreviewBg"></div>
+        <div class="wc-inner" id="wcInner"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALLERY CTA ========== -->
+<section class="section" style="text-align:center;">
+  <div class="sec-header">
+    <span class="sec-tag"><i class="tdot"></i>Wish Gallery</span>
+    <h2 class="sec-title">300+ Ready-Made <em class="gtext">Wishes</em></h2>
+    <p class="sec-sub">Click any wish to instantly copy. Every occasion covered.</p>
+  </div>
+  <a href="gallery.html" class="btn-gold btn-xl" style="margin-top:1rem;">
+    <span>🖼️ Browse All Wishes</span>
+    <i class="shine"></i>
+  </a>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section class="section">
+  <div class="sec-header">
+    <span class="sec-tag"><i class="tdot"></i>How It Works</span>
+    <h2 class="sec-title">3 Simple <em class="gtext">Steps</em></h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon">🎪</div>
+      <h3>Choose Occasion</h3>
+      <p>Pick from 100+ Indian festivals, birthdays, jayantis and special occasions.</p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon">🤖</div>
+      <h3>AI Personalize</h3>
+      <p>Add names, let AI craft the perfect message. Festival backgrounds auto-apply!</p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon">🚀</div>
+      <h3>Share Instantly</h3>
+      <p>Download as HD image or share via WhatsApp, Instagram &amp; more.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <h2 class="reveal">Spread <em class="gtext">Joy</em> This Season 🎉</h2>
+  <p class="reveal">Create your first wish — free, instant, no signup needed!</p>
+  <a href="#create" class="btn-pri glow-pulse btn-xl reveal">
+    <span>✍️ Create My Wish — Free</span>
+    <i class="shine"></i>
+  </a>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <div class="logo">🤖 AI ToolCor <span>Festival</span></div>
+      <p>Spreading joy across every celebration. India's most complete festival wish platform.</p>
+      <div class="social-row">
+        <a href="#" class="social-btn">𝕏</a>
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">FB</a>
+        <a href="#" class="social-btn">WA</a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Popular</h4>
+      <ul>
+        <li><a href="#">Diwali Wishes</a></li>
+        <li><a href="#">Birthday Wishes</a></li>
+        <li><a href="#">Eid Mubarak</a></li>
+        <li><a href="#">Independence Day</a></li>
+        <li><a href="#">Navratri Wishes</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Features</h4>
+      <ul>
+        <li><a href="#create">Create Wish</a></li>
+        <li><a href="gallery.html">Wish Gallery</a></li>
+        <li><a href="calendar.html">Festival Calendar</a></li>
+        <li><a href="#occasions">All Occasions</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">© 2026 AI ToolCor Festival. Made with ❤️ for celebrations across India and beyond.</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

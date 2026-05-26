@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>🖼️ Wish Gallery — AI ToolCor Festival</title>
+<meta name="description" content="Browse 300+ beautiful wishes for every Indian festival, birthday, jayanti. Click to instantly copy any wish!"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="particleCanvas"></canvas>
+<div class="toast-box" id="toastBox"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <span class="logo-icon">🤖</span>
+    AI ToolCor <span>Festival</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#occasions">Occasions</a></li>
+    <li><a href="index.html#create">Create</a></li>
+    <li><a href="gallery.html" class="nav-active">Gallery</a></li>
+    <li><a href="calendar.html">📅 Calendar</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeBtn">🌙</button>
+    <button class="hamburger" id="hamBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="index.html#occasions">🎪 Occasions</a>
+  <a href="index.html#create">✍️ Create</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="calendar.html">📅 Calendar</a>
+</div>
+
+<!-- HERO -->
+<section class="gal-hero">
+  <span class="sec-tag"><i class="tdot"></i>Wish Gallery</span>
+  <h1>300+ Ready-Made <em class="gtext">Wishes</em></h1>
+  <p>Every Indian festival, birthday, jayanti &amp; special occasion covered.<br/>Click any wish to copy instantly! 📋</p>
+  <div class="gal-search-wrap">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="galSearchInput" class="search-input"
+        placeholder="Search wishes..." autocomplete="off"/>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery" style="padding-top:0">
+  <div class="filter-bar" id="galFilters"></div>
+  <div class="gal-count" id="galCount"></div>
+  <div class="gal-grid" id="galGrid"></div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="cta-glow"></div>
+  <h2>Want to <em class="gtext">Personalize</em>? ✍️</h2>
+  <p>Create your own custom wish card with festival backgrounds &amp; AI messages!</p>
+  <a href="index.html#create" class="btn-pri glow-pulse btn-xl">
+    <span>✍️ Create Custom Wish</span>
+    <i class="shine"></i>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a href="index.html" class="logo">🤖 AI ToolCor <span>Festival</span></a>
+      <p>Spreading joy, one wish at a time.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#create">Create</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Popular</h4>
+      <ul>
+        <li><a href="#">Birthday Wishes</a></li>
+        <li><a href="#">Diwali Wishes</a></li>
+        <li><a href="#">Eid Mubarak</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">© 2026 AI ToolCor Festival. Made with ❤️</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

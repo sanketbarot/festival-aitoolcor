@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>📅 Festival Calendar 2026-27 — AI ToolCor Festival</title>
+<meta name="description" content="Complete Indian festival calendar 2026-2027. All Hindu, Muslim, Sikh, Christian, Jain, Buddhist festivals, national holidays, jayantis and special occasions with accurate dates."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<canvas id="particleCanvas"></canvas>
+<div class="toast-box" id="toastBox"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <span class="logo-icon">🤖</span>
+    AI ToolCor <span>Festival</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#occasions">Occasions</a></li>
+    <li><a href="index.html#create">Create</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="calendar.html" class="nav-active">📅 Calendar</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeBtn">🌙</button>
+    <button class="hamburger" id="hamBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <a href="index.html">🏠 Home</a>
+  <a href="index.html#occasions">🎪 Occasions</a>
+  <a href="index.html#create">✍️ Create</a>
+  <a href="gallery.html">🖼️ Gallery</a>
+  <a href="calendar.html">📅 Calendar</a>
+</div>
+
+<!-- HERO -->
+<section class="cal-hero">
+  <span class="sec-tag"><i class="tdot"></i>Festival Calendar</span>
+  <h1>India's Complete <em class="gtext">Festival Calendar</em></h1>
+  <p>All Hindu, Muslim, Sikh, Christian, Jain &amp; National festivals with accurate dates.<br/>Click any event to create a beautiful wish! 📅✨</p>
+
+  <!-- Legend -->
+  <div style="display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-top:1.5rem;">
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(37,99,235,.15);border:1px solid rgba(59,130,246,.3);border-radius:100px;color:var(--blue-bright)">🕉️ Hindu</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(0,160,0,.15);border:1px solid rgba(0,160,0,.3);border-radius:100px;color:#4ade80">☪️ Muslim</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(212,148,10,.15);border:1px solid rgba(212,148,10,.3);border-radius:100px;color:#fbbf24">🪯 Sikh</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(190,0,0,.15);border:1px solid rgba(190,0,0,.3);border-radius:100px;color:#f87171">✝️ Christian</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(100,100,255,.15);border:1px solid rgba(100,100,255,.3);border-radius:100px;color:#a78bfa">🇮🇳 National</span>
+    <span style="display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:4px 12px;background:rgba(255,100,100,.15);border:1px solid rgba(255,100,100,.3);border-radius:100px;color:#fca5a5">🎖️ Jayanti</span>
+  </div>
+</section>
+
+<!-- CALENDAR GRID -->
+<div id="calGrid"></div>
+
+<!-- CTA -->
+<section class="cta-sec" style="margin-top:0">
+  <div class="cta-glow"></div>
+  <h2>Create Wishes for <em class="gtext">Any Festival</em> 🎉</h2>
+  <p>Beautiful personalized wish cards. Festival backgrounds auto-apply!</p>
+  <a href="index.html#create" class="btn-pri glow-pulse btn-xl">
+    <span>✍️ Create Wish Now</span>
+    <i class="shine"></i>
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div class="ft-brand">
+      <a href="index.html" class="logo">🤖 AI ToolCor <span>Festival</span></a>
+      <p>India's most complete festival calendar &amp; wish creator.</p>
+    </div>
+    <div class="ft-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#create">Create Wish</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Upcoming</h4>
+      <ul>
+        <li><a href="#">Eid ul-Adha 2026</a></li>
+        <li><a href="#">Independence Day</a></li>
+        <li><a href="#">Ganesh Chaturthi</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Info</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bottom">© 2026 AI ToolCor Festival. All dates are approximate — may vary by region.</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
